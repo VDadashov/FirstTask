@@ -1,0 +1,10 @@
+﻿@model List<Car>
+
+<ul class="list-group">
+    @foreach (Car car in Model)
+    {
+        <li class="list-group-item active" aria-current="true">
+            <a asp-controller="Car" asp-action="detail" asp-route-id="@car.Id">@car.Year</a>
+        </li>
+    }
+</ul>
