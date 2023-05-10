@@ -23,7 +23,7 @@ namespace FirstTask.Controllers
         {
             if (id != null)
             {
-                if(_models.Exists(m => m.Id == id)) NotFound();
+                if(_models.Exists(m => m.MarkaId == id)) NotFound();
 
                 return View(_models.FindAll( m => m.MarkaId == id));
             }

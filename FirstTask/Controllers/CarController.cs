@@ -29,7 +29,7 @@ namespace FirstTask.Controllers
         {
             if (id != null)
             {
-                if (_cars.Exists(m => m.Id == id)) NotFound();
+                if (_cars.Exists(m => m.ModelId == id)) NotFound();
 
                 return View(_cars.FindAll(m => m.ModelId == id));
             }
